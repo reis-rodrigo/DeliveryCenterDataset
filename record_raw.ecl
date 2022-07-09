@@ -1,4 +1,5 @@
-﻿EXPORT record_raw := MODULE
+﻿IMPORT $;
+EXPORT record_raw := MODULE
 	EXPORT rec_hubs :=	RECORD
     STRING hub_id;
     STRING hub_name;
@@ -8,7 +9,7 @@
     STRING hub_longitude;
 		// EXPORT Hubs:= DATASET('~DeliveryCenter::hubs.csv',hubs,CSV(heading(1)));
   END;
-  EXPORT hubs:= DATASET('~DeliveryCenter::hubs.csv',rec_hubs,CSV);
+  EXPORT hubs:= DATASET('~university_of_sao_paulo::rodrigo_reis::hubs.csv',rec_hubs,CSV(heading(1)));
   
   EXPORT rec_payments :=	RECORD
     STRING payment_order_id;
@@ -19,7 +20,7 @@
     STRING payment_status;
 		// EXPORT Payments:= DATASET('~DeliveryCenter::payments.csv',payments,CSV(heading(1)));
   END;
-  EXPORT payments:= DATASET('~DeliveryCenter::payments.csv',rec_payments,CSV);
+  EXPORT payments:= DATASET('~university_of_sao_paulo::rodrigo_reis::payments.csv',rec_payments,CSV(heading(1)));
   
   EXPORT rec_stores :=	RECORD
     STRING store_id;
@@ -31,7 +32,7 @@
     STRING store_longitude;
 		// EXPORT Stores:= DATASET('~DeliveryCenter::stores.csv',stores,CSV(heading(1)));
   END;
-  EXPORT stores:= DATASET('~DeliveryCenter::stores.csv',rec_stores,CSV);
+  EXPORT stores:= DATASET('~university_of_sao_paulo::rodrigo_reis::stores.csv',rec_stores,CSV(heading(1)));
   
   EXPORT rec_deliveries :=	RECORD
     STRING driver_id;
@@ -41,7 +42,7 @@
     STRING delivery_status;
 		// EXPORT Deliveries:= DATASET('~DeliveryCenter::deliveries.csv',deliveries,CSV(heading(1)));
   END;
-  EXPORT deliveries:= DATASET('~DeliveryCenter::deliveries.csv',rec_deliveries,CSV);
+  EXPORT deliveries:= DATASET('~university_of_sao_paulo::rodrigo_reis::deliveries.csv',rec_deliveries,CSV(heading(1)));
   
   EXPORT rec_drivers :=	RECORD
     STRING driver_id;
@@ -49,7 +50,7 @@
     STRING driver_type;
 		// EXPORT Drivers:= DATASET('~DeliveryCenter::drivers.csv',drivers,CSV(heading(1)));
   END;
-  EXPORT drivers:= DATASET('~DeliveryCenter::drivers.csv',rec_drivers,CSV);
+  EXPORT drivers:= DATASET('~university_of_sao_paulo::rodrigo_reis::drivers.csv',rec_drivers,CSV(heading(1)));
   
   EXPORT rec_channels :=	RECORD
     STRING channel_id;
@@ -57,7 +58,7 @@
     STRING channel_type;
 		// EXPORT Channels:= DATASET('~DeliveryCenter::channels.csv',channels,CSV(heading(1)));
   END;
-  EXPORT channels:= DATASET('~DeliveryCenter::channels.csv',rec_channels,CSV);
+  EXPORT channels:= DATASET('~university_of_sao_paulo::rodrigo_reis::channels.csv',rec_channels,CSV(heading(1)));
   
   EXPORT rec_orders :=	RECORD
     STRING payment_order_id;
@@ -91,6 +92,6 @@
     STRING order_metric_cycle_time;
 		// EXPORT Orders:= DATASET('~DeliveryCenter::orders.csv',orders,CSV(heading(1)));
   END;
-  EXPORT orders:= DATASET('~DeliveryCenter::orders.csv',rec_orders,CSV);
+  EXPORT orders:= DATASET('~university_of_sao_paulo::rodrigo_reis::orders.csv',rec_orders,CSV(heading(1)));
 END;
 
