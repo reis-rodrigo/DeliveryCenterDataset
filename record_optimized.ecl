@@ -11,6 +11,7 @@ EXPORT record_optimized := MODULE
 		// EXPORT Hubs:= DATASET('~DeliveryCenter::hubs.csv',hubs,CSV(heading(1)));
   END;
   EXPORT hubs:= DATASET('~delivery_center::rgr::hubs.csv',rec_hubs,CSV(heading(1)));
+  // EXPORT hubs:= DATASET('~delivery_center::mkf::hubs',rec_hubs,CSV(heading(1)));
   
   EXPORT rec_payments :=	RECORD
     UNSIGNED4 payment_order_id;
@@ -23,6 +24,8 @@ EXPORT record_optimized := MODULE
 		// EXPORT Payments:= DATASET('~DeliveryCenter::payments.csv',payments,CSV(heading(1)));
   END;
   EXPORT payments:= DATASET('~delivery_center::rgr::payments.csv',rec_payments,CSV(heading(1)));
+  // EXPORT payments:= DATASET('~delivery_center::mkf::payments',rec_payments,CSV(heading(1)));
+  
   
   EXPORT rec_stores :=	RECORD
     UNSIGNED2 store_id;
@@ -36,6 +39,7 @@ EXPORT record_optimized := MODULE
 		// EXPORT Stores:= DATASET('~DeliveryCenter::stores.csv',stores,CSV(heading(1)));
   END;
   EXPORT stores:= DATASET('~delivery_center::rgr::stores.csv',rec_stores,CSV(heading(1)));
+  // EXPORT stores:= DATASET('~delivery_center::mkf::stores',rec_stores,CSV(heading(1)));
   
   EXPORT rec_deliveries :=	RECORD
     UNSIGNED4 driver_id;
@@ -47,6 +51,7 @@ EXPORT record_optimized := MODULE
 		// EXPORT Deliveries:= DATASET('~DeliveryCenter::deliveries.csv',deliveries,CSV(heading(1)));
   END;
   EXPORT deliveries:= DATASET('~delivery_center::rgr::deliveries.csv',rec_deliveries,CSV(heading(1)));
+  // EXPORT deliveries:= DATASET('~delivery_center::mkf::deliveries',rec_deliveries,CSV(heading(1)));
   
   EXPORT rec_drivers :=	RECORD
     UNSIGNED3 driver_id;
@@ -56,6 +61,7 @@ EXPORT record_optimized := MODULE
 		// EXPORT Drivers:= DATASET('~DeliveryCenter::drivers.csv',drivers,CSV(heading(1)));
   END;
   EXPORT drivers:= DATASET('~delivery_center::rgr::drivers.csv',rec_drivers,CSV(heading(1)));
+  // EXPORT drivers:= DATASET('~delivery_center::mkf::drivers',rec_drivers,CSV(heading(1)));
   
   EXPORT rec_channels :=	RECORD
     UNSIGNED1 channel_id;
@@ -65,6 +71,7 @@ EXPORT record_optimized := MODULE
 		// EXPORT Channels:= DATASET('~DeliveryCenter::channels.csv',channels,CSV(heading(1)));
   END;
   EXPORT channels:= DATASET('~delivery_center::rgr::channels.csv',rec_channels,CSV(heading(1)));
+  // EXPORT channels:= DATASET('~delivery_center::mkf::channels',rec_channels,CSV(heading(1)));
   
   EXPORT rec_orders :=	RECORD
     UNSIGNED4 payment_order_id;
@@ -99,5 +106,6 @@ EXPORT record_optimized := MODULE
 		// EXPORT Orders:= DATASET('~DeliveryCenter::orders.csv',orders,CSV(heading(1)));
   END;
   EXPORT orders:= DATASET('~delivery_center::rgr::orders.csv',rec_orders,CSV(heading(1)));
+  // EXPORT orders:= DATASET('~delivery_center::mkf::orders',rec_orders,CSV(heading(1)));
 END;
 
