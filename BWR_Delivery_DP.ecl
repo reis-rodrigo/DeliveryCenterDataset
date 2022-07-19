@@ -9,21 +9,21 @@ hubs := $.record_raw.hubs;
 stores := $.record_raw.stores;
 
 // Data Patterns
-profileOrders := STD.DataPatterns.Profile(orders);
-profileChannels := STD.DataPatterns.Profile(channels);
-profileDrivers := STD.DataPatterns.Profile(drivers);
-profileDeliveries := STD.DataPatterns.Profile(deliveries);
-profilePayments := STD.DataPatterns.Profile(payments);
-profileHubs := STD.DataPatterns.Profile(hubs);
-profileStores := STD.DataPatterns.Profile(stores);
+// profileOrders := STD.DataPatterns.Profile(orders);
+// profileChannels := STD.DataPatterns.Profile(channels);
+// profileDrivers := STD.DataPatterns.Profile(drivers);
+// profileDeliveries := STD.DataPatterns.Profile(deliveries);
+// profilePayments := STD.DataPatterns.Profile(payments);
+// profileHubs := STD.DataPatterns.Profile(hubs);
+// profileStores := STD.DataPatterns.Profile(stores);
 
-OUTPUT(profileOrders, ALL, NAMED('profileOrders'));
-OUTPUT(profileChannels, ALL, NAMED('profileChannels'));
-OUTPUT(profileDrivers, ALL, NAMED('profileDrivers'));
-OUTPUT(profileDeliveries, ALL, NAMED('profileDeliveries'));
-OUTPUT(profilePayments, ALL, NAMED('profilePayments'));
-OUTPUT(profileHubs, ALL, NAMED('profileHubs'));
-OUTPUT(profileStores, ALL, NAMED('profileStores'));
+// OUTPUT(profileOrders, ALL, NAMED('profileOrders'));
+// OUTPUT(profileChannels, ALL, NAMED('profileChannels'));
+// OUTPUT(profileDrivers, ALL, NAMED('profileDrivers'));
+// OUTPUT(profileDeliveries, ALL, NAMED('profileDeliveries'));
+// OUTPUT(profilePayments, ALL, NAMED('profilePayments'));
+// OUTPUT(profileHubs, ALL, NAMED('profileHubs'));
+// OUTPUT(profileStores, ALL, NAMED('profileStores'));
 
 // Best Record Structure
 bestrecordOrders := STD.DataPatterns.BestRecordStructure(orders);

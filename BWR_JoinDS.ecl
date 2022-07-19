@@ -1,5 +1,5 @@
 ﻿IMPORT $,STD;
 
-df := $.join_ds.df;
+df := $.join_ds;
 
 OUTPUT(df, ALL, NAMED('df'));

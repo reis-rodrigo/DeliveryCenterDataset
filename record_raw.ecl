@@ -12,8 +12,8 @@ EXPORT record_raw := MODULE
   EXPORT hubs:= DATASET('~delivery_center::rgr::hubs.csv',rec_hubs,CSV(heading(1)));
   
   EXPORT rec_payments :=	RECORD
-    STRING payment_order_id;
     STRING payment_id;
+    STRING payment_order_id;
     STRING payment_amount;
     STRING payment_fee;
     STRING payment_method;
@@ -35,9 +35,9 @@ EXPORT record_raw := MODULE
   EXPORT stores:= DATASET('~delivery_center::rgr::stores.csv',rec_stores,CSV(heading(1)));
   
   EXPORT rec_deliveries :=	RECORD
-    STRING driver_id;
-    STRING delivery_order_id;
     STRING delivery_id;
+    STRING delivery_order_id;
+    STRING driver_id;
     STRING delivery_distance_meters;
     STRING delivery_status;
 		// EXPORT Deliveries:= DATASET('~DeliveryCenter::deliveries.csv',deliveries,CSV(heading(1)));
@@ -61,11 +61,11 @@ EXPORT record_raw := MODULE
   EXPORT channels:= DATASET('~delivery_center::rgr::channels.csv',rec_channels,CSV(heading(1)));
   
   EXPORT rec_orders :=	RECORD
-    STRING payment_order_id;
-    STRING delivery_order_id;
+    STRING order_id;
     STRING store_id;
     STRING channel_id;
-    STRING order_id;
+    STRING payment_order_id;
+    STRING delivery_order_id;
     STRING order_status;
     STRING order_amount;
     STRING order_delivery_fee;

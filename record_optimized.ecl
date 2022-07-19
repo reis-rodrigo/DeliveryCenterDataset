@@ -14,8 +14,8 @@ EXPORT record_optimized := MODULE
   // EXPORT hubs:= DATASET('~delivery_center::mkf::hubs',rec_hubs,CSV(heading(1)));
   
   EXPORT rec_payments :=	RECORD
-    UNSIGNED4 payment_order_id;
     UNSIGNED4 payment_id;
+    UNSIGNED4 payment_order_id;
     REAL8 payment_amount;
     REAL4 payment_fee;
     STRING24 payment_method;
@@ -42,9 +42,9 @@ EXPORT record_optimized := MODULE
   // EXPORT stores:= DATASET('~delivery_center::mkf::stores',rec_stores,CSV(heading(1)));
   
   EXPORT rec_deliveries :=	RECORD
-    UNSIGNED4 driver_id;
+    UNSIGNED4 delivery_id;
     UNSIGNED4 delivery_order_id;
-    UNSIGNED3 delivery_id;
+    UNSIGNED3 driver_id;
     UNSIGNED4 delivery_distance_meters;
     STRING10 delivery_status;
 
@@ -67,18 +67,18 @@ EXPORT record_optimized := MODULE
     UNSIGNED1 channel_id;
     STRING14 channel_name;
     STRING11 channel_type;
-
+    
 		// EXPORT Channels:= DATASET('~DeliveryCenter::channels.csv',channels,CSV(heading(1)));
   END;
   EXPORT channels:= DATASET('~delivery_center::rgr::channels.csv',rec_channels,CSV(heading(1)));
   // EXPORT channels:= DATASET('~delivery_center::mkf::channels',rec_channels,CSV(heading(1)));
   
   EXPORT rec_orders :=	RECORD
-    UNSIGNED4 payment_order_id;
-    UNSIGNED2 delivery_order_id;
-    UNSIGNED1 store_id;
-    UNSIGNED4 channel_id;
     UNSIGNED4 order_id;
+    UNSIGNED2 store_id;
+    UNSIGNED1 channel_id;
+    UNSIGNED4 payment_order_id;
+    UNSIGNED4 delivery_order_id;
     STRING8 order_status;
     REAL8 order_amount;
     REAL4 order_delivery_fee;
@@ -103,6 +103,7 @@ EXPORT record_optimized := MODULE
     REAL4 order_metric_expedition_speed_time;
     REAL8 order_metric_transit_time;
     REAL8 order_metric_cycle_time;
+
 		// EXPORT Orders:= DATASET('~DeliveryCenter::orders.csv',orders,CSV(heading(1)));
   END;
   EXPORT orders:= DATASET('~delivery_center::rgr::orders.csv',rec_orders,CSV(heading(1)));
