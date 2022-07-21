@@ -19,6 +19,7 @@ EXPORT join_data_theft := MODULE
     SELF.score := 1;
   END;
 
+// Rentabilidade, Seguranca, Relevo
 
   EXPORT joineds := JOIN(theft,df,LEFT.hub_name=RIGHT.hub_name, Mytransf(LEFT, RIGHT));
   

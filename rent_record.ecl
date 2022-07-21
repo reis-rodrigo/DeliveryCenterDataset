@@ -15,6 +15,6 @@ EXPORT rent_record := MODULE
       SELF:=L;
   END;
 
-  EXPORT rentability := PROJECT(dataframe.df,Reformatter(LEFT)):PERSIST('~chicago::rgr::intro::Formatted_file');
+  EXPORT rentability := PROJECT(dataframe.df,Reformatter(LEFT)):PERSIST('~delivery_center::rgr::rentability');
   
 END;
